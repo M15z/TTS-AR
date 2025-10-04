@@ -62,8 +62,8 @@ Once you see actual training steps (loss updates), switch to **frame** batching 
 ## Prerequisites
 
 - Python env with: `torch`, `torchaudio`, `datasets`, `pyarrow`, `tqdm`, `accelerate`, and **FFmpeg/ffprobe** in PATH.
-- F5‑TTS repo cloned this repe: `[C:\Users\User\Desktop\F5-TTS](https://github.com/M15z/TTS-AR)`
-- Arabic pretrained checkpoint from Ibrahim saleh: `[C:\Users\User\Desktop\F5-TTS\ckpts\model_380000.pt](https://huggingface.co/IbrahimSalah/F5-TTS-Arabic/blob/main/model_380000.pt)`
+- F5‑TTS repo cloned this repe: `https://github.com/M15z/TTS-AR`
+- Arabic pretrained checkpoint from Ibrahim saleh: `https://huggingface.co/IbrahimSalah/F5-TTS-Arabic/blob/main/model_380000.pt`
 - **IbrahimSalah/F5‑TTS‑Arabic `vocab.txt`** available
 
 > Run once: `accelerate config`  
