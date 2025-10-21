@@ -1,5 +1,3 @@
----
-
 ## Critical Fix: Training Exits Immediately Issue
 
 ### Problem
@@ -10,7 +8,7 @@ The pretrained checkpoint file (`model_380000.pt`) contains internal metadata th
 
 ### Solution: Reset the Checkpoint
 
-**Step 1: Create a reset script**
+#### Step 1: Create a reset script
 
 Save this as `reset_checkpoint.py` in your `ckpts` folder:
 ```python
@@ -33,24 +31,24 @@ torch.save(new_checkpoint, 'model_pretrained_reset.pt')
 print("Checkpoint reset successfully!")
 ```
 
-**Step 2: Rename your pretrained model**
+#### Step 2: Rename your pretrained model
 ```cmd
 cd C:\Users\User\Desktop\F5-TTS\ckpts
 ren model_380000.pt model_pretrained.pt
 ```
 
-**Step 3: Run the reset script**
+#### Step 3: Run the reset script
 ```cmd
 python reset_checkpoint.py
 ```
 
-**Step 4: Delete any existing cached checkpoints**
+#### Step 4: Delete any existing cached checkpoints
 ```cmd
 cd C:\Users\User\Desktop\F5-TTS\ckpts
 rmdir /S /Q my_dataset_ar
 ```
 
-**Step 5: Use the reset checkpoint for training**
+#### Step 5: Use the reset checkpoint for training
 ```cmd
 cd C:\Users\User\Desktop\F5-TTS
 set PYTHONPATH=C:\Users\User\Desktop\F5-TTS\src && ^
@@ -97,7 +95,7 @@ C:\Users\User\Desktop\F5-TTS\ckpts\{dataset_name}\
 
 If you re-run training, the script will auto-resume from `model_last.pt`. To start fresh, delete the `{dataset_name}` folder.
 
----
+* * *
 
 ## Understanding Training Parameters
 
@@ -124,9 +122,9 @@ UserWarning: In 2.9, this function's implementation will be changed to use torch
 
 **This is NOT an error!** It's a deprecation warning about future PyTorch versions. Your training will work perfectly. Focus on the actual training metrics instead.
 
----
+* * *
 
-## Summary of Conversation
+## Troubleshooting Summary
 
 ### Issues Encountered:
 1. ✅ Training exiting immediately with "Saved last checkpoint at update 380000"
