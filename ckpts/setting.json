@@ -1,0 +1,21 @@
+{
+    "exp_name": "F5TTS_v1_Base",
+    "learning_rate": 0.0001,
+    "batch_size_per_gpu": 800,
+    "batch_size_type": "frame",
+    "max_samples": 8,
+    "grad_accumulation_steps": 2,
+    "max_grad_norm": 1,
+    "epochs": 100,
+    "num_warmup_updates": 100,
+    "save_per_updates": 500,
+    "keep_last_n_checkpoints": -1,
+    "last_per_updates": 100,
+    "finetune": true,
+    "file_checkpoint_train": "C:\\Users\\User\\Desktop\\F5-TTS\\ckpts\\model_380000.pt",
+    "tokenizer_type": "custom",
+    "tokenizer_file": "C:\\Users\\User\\Desktop\\F5-TTS\\data\\my_dataset_ar\\vocab.txt",
+    "mixed_precision": "fp16",
+    "logger": "none",
+    "bnb_optimizer": false
+}
